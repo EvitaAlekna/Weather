@@ -14,11 +14,13 @@ public class WeatherResponse {
 
     private Temp current;
 
+    private List<Current> currents;
+
     private List<Minutely> minutely;
 
     private List<Temp> hourly;
 
-    private List<WeatherDetails> daily;
+    private List<Weather> daily;
 
     private List<Alert> alerts;
 
@@ -78,11 +80,11 @@ public class WeatherResponse {
         this.hourly = hourly;
     }
 
-    public List<WeatherDetails> getDaily() {
+    public List<Weather> getDaily() {
         return daily;
     }
 
-    public void setDaily(List<WeatherDetails> daily) {
+    public void setDaily(List<Weather> daily) {
         this.daily = daily;
     }
 

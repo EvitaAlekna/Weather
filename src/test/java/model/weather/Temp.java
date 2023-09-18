@@ -2,35 +2,59 @@ package model.weather;
 
 import io.cucumber.core.internal.com.fasterxml.jackson.annotation.JsonProperty;
 
-public class Temp extends WeatherDetails {
-    private double temp;
+public class Temp extends Current {
+    private double day;
+    private double min;
+    private double max;
+    private double night;
+    private double eve;
+    private double morn;
 
-    @JsonProperty("feels_like")
-    private double feelLike;
-
-    private long visibility;
-
-    public double getTemp() {
-        return temp;
+    public double getDay() {
+        return day;
     }
 
-    public void setTemp(double temp) {
-        this.temp = temp;
+    public void setDay(double day) {
+        this.day = day;
     }
 
-    public double getFeelLike() {
-        return feelLike;
+    public double getMin() {
+        return min;
     }
 
-    public void setFeelLike(double feelLike) {
-        this.feelLike = feelLike;
+    public void setMin(double min) {
+        this.min = min;
     }
 
-    public long getVisibility() {
-        return visibility;
+    public double getMax() {
+        return max;
     }
 
-    public void setVisibility(long visibility) {
-        this.visibility = visibility;
+    public void setMax(double max) {
+        this.max = max;
+    }
+
+    public double getNight() {
+        return night;
+    }
+
+    public void setNight(double night) {
+        this.night = night;
+    }
+
+    public double getEve() {
+        return eve;
+    }
+
+    public void setEve(double eve) {
+        this.eve = eve;
+    }
+
+    public double getMorn() {
+        return morn;
+    }
+
+    public void setMorn(double morn) {
+        this.morn = morn;
     }
 }

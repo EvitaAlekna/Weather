@@ -1,5 +1,7 @@
 package model.weather;
 
+import io.netty.handler.codec.spdy.SpdyHttpResponseStreamIdHandler;
+
 public class Minutely {
     private long id;
     private int precipitation;

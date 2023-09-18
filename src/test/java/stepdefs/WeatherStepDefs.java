@@ -49,9 +49,12 @@ public class WeatherStepDefs {
     @Then("current weather data is")
     public void current_weather_check(Map<String, String> params) {
         Assertions.assertEquals(Long.parseLong(params.get("dt")), response.getCurrent().getDt(), "Incorrect Dt!");
-        Assertions.assertEquals(Long.parseLong(params.get("sunrise")), response.getCurrent().getS(), "Incorrect Sunrise!");
+        Assertions.assertEquals(Long.parseLong(params.get("sunrise")), response.getCurrent().getSunrise(), "Incorrect Sunrise!");
         Assertions.assertEquals(Long.parseLong(params.get("sunset")), response.getCurrent().getSunset(), "Incorrect Sunset!");
         Assertions.assertEquals(Double.parseDouble(params.get("temp")), response.getCurrent().getTemp(), "Incorrect Temp!");
+        Assertions.assertEquals(Double.parseDouble(params.get("feelsLike")), response.getCurrent().getFeelsLike(), "Incorrect FeelsLike!");
+        Assertions.assertEquals(Integer.parseInt(params.get("pressure")), response.getCurrent().getPressure(), "Incorrect Pressure!");
+
 
     }
 }
