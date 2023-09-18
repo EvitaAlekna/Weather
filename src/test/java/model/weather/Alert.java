@@ -2,6 +2,8 @@ package model.weather;
 
 import io.cucumber.core.internal.com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.List;
+
 public class Alert {
     @JsonProperty("sender_name")
     private String senderName;
@@ -11,6 +13,8 @@ public class Alert {
     private long end;
     private String description;
     private String tags;
+
+    public List<Tags> tagsList;
 
     public String getSenderName() {
         return senderName;
@@ -58,5 +62,13 @@ public class Alert {
 
     public void setTags(String tags) {
         this.tags = tags;
+    }
+
+    public List<Tags> getTagsList() {
+        return tagsList;
+    }
+
+    public void setTagsList(List<Tags> tagsList) {
+        this.tagsList = tagsList;
     }
 }
